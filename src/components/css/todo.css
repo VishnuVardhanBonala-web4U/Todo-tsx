@@ -1,0 +1,59 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+}
+
+.todo {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Add margin on all sides */
+}
+
+table::-webkit-scrollbar {
+  width: 12px;
+}
+
+table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+table::-webkit-scrollbar-thumb {
+  background-color: rgba(101, 54, 54, 0.2);
+  border-radius: 10px;
+}
+
+table::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Add this CSS to make the table header sticky */
+table thead th {
+  position: sticky;
+  background: #1976d2;
+  top: 0;
+  z-index: 1; /* Ensure the header appears above the table content */
+}
+
+/* Adjust the z-index of table rows to ensure they appear below the header */
+table tbody tr {
+  z-index: 0;
+}
